@@ -58,7 +58,7 @@ export default function MainSearchCheckIn() {
         if (validate()) {
             setErr('');
             const id = localStorage.getItem('user_id');
-            axios.post('http://13.125.244.223/chatbot/checkCheckIn',{'id':id, 'rnum' :form.rnum})
+            axios.post('http://13.125.244.223:9000/chatbot/checkCheckIn',{'id':id, 'rnum' :form.rnum})
                 .then(res => {
                     if(res.data.result === 1){
                         navigate('/mypage/checkIn')

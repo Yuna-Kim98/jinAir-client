@@ -10,7 +10,7 @@ const BarChart = () => {
 
   useEffect(() => {
     axios
-      .post("http://13.125.244.223/payment/lowest")
+      .post("http://13.125.244.223:9000/payment/lowest")
       .then((response) => {
         console.log("✅ 서버 응답 데이터:", response.data);
 

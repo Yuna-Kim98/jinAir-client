@@ -18,7 +18,7 @@ export default function NaverRedirectPage() {
 
     (async () => {
       try {
-        const { data } = await axios.post('http://13.125.244.223/member/naver-token', { code, state });
+        const { data } = await axios.post('http://13.125.244.223:9000/member/naver-token', { code, state });
 
         if (data && data.user && window.opener) {
           window.opener.postMessage({
