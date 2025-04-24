@@ -12,7 +12,7 @@ export default function KakaoRedirectPage() {
 
     (async () => {
       try {
-        const { data } = await axios.post('http://localhost:9000/member/kakao-token', { code });
+        const { data } = await axios.post('http://13.125.244.223/member/kakao-token', { code });
 
         if (data && data.user && window.opener) {
           const kakaoUser = data.user;
